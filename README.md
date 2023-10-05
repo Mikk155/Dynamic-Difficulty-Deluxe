@@ -88,6 +88,8 @@ Barnacles will pull players faster.
 
 - The speed up pulling is based on the current dificulty. to be exact, it pulls players 0.2 units multiplied per difficulty %
 
+---
+
 ### alien grunt
 
 | as_command | default value | description |
@@ -99,6 +101,8 @@ Barnacles will pull players faster.
 | agrunt berserk | 1 | 0 = disable alien grunt's sk_agrunt_melee_engage_distance multiplier |
 | agrunt berserk diff | 1 | minimun difficulty in wich this feature will be enabled |
 
+---
+
 ### alien slave
 
 | as_command | default value | description |
@@ -106,6 +110,22 @@ Barnacles will pull players faster.
 | islave zap | 1 | 0 = disable alien slave's sk_islave_speed_zap multiplier |
 | islave zap diff | 1 | minimun difficulty in wich this feature will be enabled |
 
+---
+
+### appearflags
+
+| as_command | default value | description |
+|------------|---------------|-------------|
+| appearflags | 0 | 1 = enables appearflags feature |
+
+any monster/squadmaker entity supports two custom keyvalues.
+
+- ``$i_ddd_appearance_max``
+	if max keyvalue is 50, this monster will appear only in diff 49 or less.
+- ``$i_ddd_appearance_min``
+	if min keyvalue is 50, this monster will appear only in diff 50 or greater.
+
+---
 
 <details><summary>default_map_settings.cfg</summary>
 <p>
@@ -129,6 +149,7 @@ as_command .DynamicDifficultyDeluxe agrunt berserk 1
 as_command .DynamicDifficultyDeluxe agrunt berserk diff 1
 as_command .DynamicDifficultyDeluxe islave zap 1
 as_command .DynamicDifficultyDeluxe islave zap diff 1
+as_command .DynamicDifficultyDeluxe appearflags 0
 
 ```
 
