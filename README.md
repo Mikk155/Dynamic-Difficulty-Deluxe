@@ -38,6 +38,13 @@ as_command .DynamicDifficultyDeluxe armorvest enable 1
 as_command .DynamicDifficultyDeluxe armorvest reduction 0.8
 as_command .DynamicDifficultyDeluxe uncrab enable 1
 as_command .DynamicDifficultyDeluxe uncrab diff 1
+as_command .DynamicDifficultyDeluxe agrunt punch 1
+as_command .DynamicDifficultyDeluxe agrunt punch diff 10
+as_command .DynamicDifficultyDeluxe agrunt stun 1
+as_command .DynamicDifficultyDeluxe agrunt stun diff 20
+as_command .DynamicDifficultyDeluxe agrunt berserk 1
+as_command .DynamicDifficultyDeluxe agrunt berserk diff 1
+
 ```
 
 </p>
@@ -106,3 +113,14 @@ Barnacles will pull players faster.
 **NOTES:**
 
 - The speed up pulling is based on the current dificulty. to be exact, it pulls players 0.2 units multiplied per difficulty %
+
+### alien grunt
+
+| as_command | default value | description |
+|------------|---------------|-------------|
+| agrunt punch | 1 | 0 = disable alien grunt punch pushing players |
+| agrunt punch diff | 1 | minimun difficulty in wich this feature will be enabled |
+| agrunt stun | 1 | 0 = disable alien grunt's hornets stunning players |
+| agrunt stun diff | 1 | minimun difficulty in wich this feature will be enabled |
+| agrunt berserk | 1 | 0 = disable alien grunt's sk_agrunt_melee_engage_distance multiplier |
+| agrunt berserk diff | 1 | minimun difficulty in wich this feature will be enabled |
