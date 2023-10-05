@@ -30,7 +30,7 @@ for use any of them write in your default_map_settings.cfg or map's cfg ``as_com
 
 
 
-<details><summary>default settings</summary>
+<details><summary>default_map_settings.cfg</summary>
 <p>
 
 ```
@@ -42,7 +42,28 @@ as_command .DynamicDifficultyDeluxe barnacle enable 1
 as_command .DynamicDifficultyDeluxe barnacle diff 1
 as_command .DynamicDifficultyDeluxe armorvest enable 1
 as_command .DynamicDifficultyDeluxe armorvest reduction 0.8
+as_command .DynamicDifficultyDeluxe uncrab enable 1
+as_command .DynamicDifficultyDeluxe uncrab diff 1
 ```
 
 </p>
 </details>
+
+# Features:
+
+### Beheaded zombie
+
+When atacking zombies, if the headcrab is not damaged enought, the zombie will be beheaded when he die, allowing the headcrab to jump from its human body
+
+| as_command | default value | description |
+|------------|---------------|-------------|
+| uncrab enable | 1 | 0 = disable zombies being beheaded |
+| uncrab diff | 1 | minimun difficulty in wich this feature will be enabled |
+
+**NOTES:**
+
+- Zombie's mdl files must ends with ``"_uncrab.mdl"``
+- spawned headcrabs will share ``classify`` from it's zombie owner
+- spawned headcrabs health will be based on the cvar sk_headcrab_health - damage the zombie received on the headcrab
+
+---
