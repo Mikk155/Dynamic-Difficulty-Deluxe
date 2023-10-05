@@ -20,7 +20,6 @@ final class CMSG
         m_FileSystem.GetKeyAndValue( m_szPath + 'squad_alerted.txt', squad_alerted, true );
         m_FileSystem.GetKeyAndValue( m_szPath + 'player_revive.txt', player_revive, true );
         m_FileSystem.GetKeyAndValue( m_szPath + 'projectiles_speed.txt', projectiles_speed, true );
-        m_FileSystem.GetKeyAndValue( m_szPath + 'voltigore_explode.txt', voltigore_explode, true );
         m_FileSystem.GetKeyAndValue( m_szPath + 'deathdrop_grenade.txt', deathdrop_grenade, true );
         m_FileSystem.GetKeyAndValue( m_szPath + 'nochanges.txt', nochanges, true );
         m_FileSystem.GetKeyAndValue( m_szPath + 'changes.txt', changes, true );*/
@@ -42,5 +41,6 @@ final class CMSG
         global_messages( agrunt_stun, 'agrunt stun', true, msgPath );
         global_messages( islave_zap, 'islave zap', true, msgPath );
         global_messages( appearflags, 'appearflags', true, msgPath );
+        global_messages( voltigore_explode, 'voltigore gib', true, msgPath );
     }
 }
