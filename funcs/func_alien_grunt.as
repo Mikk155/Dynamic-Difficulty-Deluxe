@@ -37,7 +37,7 @@ final class DDDAlienGrunt
 
     bool stun( CBaseEntity@ pInflictor )
     {
-        return ( active( enable_stun, diff_punch ) && pInflictor.GetClassname() == 'hornet' );
+        return ( active( enable_stun, diff_stun ) && pInflictor.GetClassname() == 'hornet' );
     }
 
     void stun( CBasePlayer@ pPlayer, CBaseEntity@ pInflictor )
