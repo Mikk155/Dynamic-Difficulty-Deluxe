@@ -15,7 +15,7 @@ final class DDDBarnacleSpeed
         return 0.2f * float( g_DDD.diff );
     }
 
-    bool Find( CBasePlayer@ pPlayer )
+    bool condition( CBasePlayer@ pPlayer )
     {
         if( active() && ( pPlayer.m_Activity == ACT_BARNACLE_PULL || pPlayer.pev.button & IN_DUCK > 0 ) )
         {
