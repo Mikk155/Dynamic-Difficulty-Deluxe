@@ -24,32 +24,6 @@ for use any of them write in your default_map_settings.cfg or map's cfg ``as_com
 | vote time | 15 | time for voting |
 | vote allowin | 30 | time until vote get enabled during a map load |
 
-<details><summary>default_map_settings.cfg</summary>
-<p>
-
-```
-as_command .DynamicDifficultyDeluxe disable 0
-as_command .DynamicDifficultyDeluxe vote cooldown 60
-as_command .DynamicDifficultyDeluxe vote time 15
-as_command .DynamicDifficultyDeluxe vote allowin 30
-as_command .DynamicDifficultyDeluxe barnacle enable 1
-as_command .DynamicDifficultyDeluxe barnacle diff 1
-as_command .DynamicDifficultyDeluxe armorvest enable 1
-as_command .DynamicDifficultyDeluxe armorvest reduction 0.8
-as_command .DynamicDifficultyDeluxe uncrab enable 1
-as_command .DynamicDifficultyDeluxe uncrab diff 1
-as_command .DynamicDifficultyDeluxe agrunt punch 1
-as_command .DynamicDifficultyDeluxe agrunt punch diff 10
-as_command .DynamicDifficultyDeluxe agrunt stun 1
-as_command .DynamicDifficultyDeluxe agrunt stun diff 20
-as_command .DynamicDifficultyDeluxe agrunt berserk 1
-as_command .DynamicDifficultyDeluxe agrunt berserk diff 1
-
-```
-
-</p>
-</details>
-
 # Features:
 
 ### Beheaded zombie
@@ -124,3 +98,30 @@ Barnacles will pull players faster.
 | agrunt stun diff | 1 | minimun difficulty in wich this feature will be enabled |
 | agrunt berserk | 1 | 0 = disable alien grunt's sk_agrunt_melee_engage_distance multiplier |
 | agrunt berserk diff | 1 | minimun difficulty in wich this feature will be enabled |
+
+
+<details><summary>default_map_settings.cfg</summary>
+<p>
+
+```
+as_command .DynamicDifficultyDeluxe disable 0
+as_command .DynamicDifficultyDeluxe vote cooldown 60
+as_command .DynamicDifficultyDeluxe vote time 15
+as_command .DynamicDifficultyDeluxe vote allowin 30
+as_command .DynamicDifficultyDeluxe barnacle enable 1
+as_command .DynamicDifficultyDeluxe barnacle diff 1
+as_command .DynamicDifficultyDeluxe armorvest enable 1
+as_command .DynamicDifficultyDeluxe armorvest reduction 0.8
+as_command .DynamicDifficultyDeluxe uncrab enable 1
+as_command .DynamicDifficultyDeluxe uncrab diff 1
+as_command .DynamicDifficultyDeluxe agrunt punch 1
+as_command .DynamicDifficultyDeluxe agrunt punch diff 10
+as_command .DynamicDifficultyDeluxe agrunt stun 1
+as_command .DynamicDifficultyDeluxe agrunt stun diff 20
+as_command .DynamicDifficultyDeluxe agrunt berserk 1
+as_command .DynamicDifficultyDeluxe agrunt berserk diff 1
+
+```
+
+</p>
+</details>
