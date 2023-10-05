@@ -2,7 +2,7 @@ CMSG msg;
 final class CMSG
 {
     dictionary diff_voted, diff_updated, vote_menu, vote_showinfo, vote_startvote, vote_cooldown, vote_diffstarted, vote_notenought,
-    changes, nochanges, agrunt_berserk, map_changes, barnacle_speed, zombie_uncrab, deathdrop_grenade, voltigore_explode, projectiles_speed,
+    changes, nochanges, agrunt_berserk, appearflags, barnacle_speed, zombie_uncrab, deathdrop_grenade, voltigore_explode, projectiles_speed,
     player_revive, agrunt_punchpush, agrunt_stun, squad_alerted, monster_alert, always_gib, diff_current, using_ddd, reflect_friendlyfire,
     islave_zap, diffforce_no, diffforce_yes
     ;
@@ -22,7 +22,6 @@ final class CMSG
         m_FileSystem.GetKeyAndValue( m_szPath + 'projectiles_speed.txt', projectiles_speed, true );
         m_FileSystem.GetKeyAndValue( m_szPath + 'voltigore_explode.txt', voltigore_explode, true );
         m_FileSystem.GetKeyAndValue( m_szPath + 'deathdrop_grenade.txt', deathdrop_grenade, true );
-        m_FileSystem.GetKeyAndValue( m_szPath + 'map_changes.txt', map_changes, true );
         m_FileSystem.GetKeyAndValue( m_szPath + 'nochanges.txt', nochanges, true );
         m_FileSystem.GetKeyAndValue( m_szPath + 'changes.txt', changes, true );*/
 
@@ -42,5 +41,6 @@ final class CMSG
         global_messages( agrunt_punchpush, 'agrunt punch', true, msgPath );
         global_messages( agrunt_stun, 'agrunt stun', true, msgPath );
         global_messages( islave_zap, 'islave zap', true, msgPath );
+        global_messages( appearflags, 'appearflags', true, msgPath );
     }
 }
