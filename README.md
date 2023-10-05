@@ -127,6 +127,15 @@ any monster/squadmaker entity supports two custom keyvalues.
 
 ---
 
+### alien voltigore
+
+| as_command | default value | description |
+|------------|---------------|-------------|
+| voltigore gib | 1 | 0 = disable alien voltigore chance of instantly explode on death |
+| voltigore gib diff | 1 | minimun difficulty in wich this feature will be enabled |
+
+---
+
 <details><summary>default_map_settings.cfg</summary>
 <p>
 
@@ -150,6 +159,9 @@ as_command .DynamicDifficultyDeluxe agrunt berserk diff 1
 as_command .DynamicDifficultyDeluxe islave zap 1
 as_command .DynamicDifficultyDeluxe islave zap diff 1
 as_command .DynamicDifficultyDeluxe appearflags 0
+as_command .DynamicDifficultyDeluxe voltigore gib 1
+as_command .DynamicDifficultyDeluxe voltigore gib diff 1
+
 
 ```
 
