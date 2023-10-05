@@ -15,6 +15,11 @@ final class DDDAlienSlave
         }
     }
 
+    const float AlienSlaveZapp()
+    {
+        return float( zapspeed + float( 0.020f * g_DDD.diff ) );
+    }
+
     void MapInit()
     {
         zapspeed = g_EngineFuncs.CVarGetFloat( 'sk_islave_speed_zap' );
@@ -23,10 +28,5 @@ final class DDDAlienSlave
     bool active( int tu, int td )
     {
         return ( tu == 1 && g_DDD.diff >= td );
-    }
-
-    const float AlienSlaveZapp()
-    {
-        return float( zapspeed + float( 0.020f * g_DDD.diff ) );
     }
 }
