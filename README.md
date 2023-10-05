@@ -99,6 +99,13 @@ Barnacles will pull players faster.
 | agrunt berserk | 1 | 0 = disable alien grunt's sk_agrunt_melee_engage_distance multiplier |
 | agrunt berserk diff | 1 | minimun difficulty in wich this feature will be enabled |
 
+### alien slave
+
+| as_command | default value | description |
+|------------|---------------|-------------|
+| islave zap | 1 | 0 = disable alien slave's sk_islave_speed_zap multiplier |
+| islave zap diff | 1 | minimun difficulty in wich this feature will be enabled |
+
 
 <details><summary>default_map_settings.cfg</summary>
 <p>
@@ -120,6 +127,8 @@ as_command .DynamicDifficultyDeluxe agrunt stun 1
 as_command .DynamicDifficultyDeluxe agrunt stun diff 20
 as_command .DynamicDifficultyDeluxe agrunt berserk 1
 as_command .DynamicDifficultyDeluxe agrunt berserk diff 1
+as_command .DynamicDifficultyDeluxe islave zap 1
+as_command .DynamicDifficultyDeluxe islave zap diff 1
 
 ```
 
