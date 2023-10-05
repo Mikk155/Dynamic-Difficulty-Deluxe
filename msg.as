@@ -13,7 +13,6 @@ final class CMSG
 
         /*m_FileSystem.GetKeyAndValue( m_szPath + 'diffforce_yes.txt', diffforce_yes, true );
         m_FileSystem.GetKeyAndValue( m_szPath + 'diffforce_no.txt', diffforce_no, true );
-        m_FileSystem.GetKeyAndValue( m_szPath + 'islave_zap.txt', islave_zap, true );
         m_FileSystem.GetKeyAndValue( m_szPath + 'reflect_friendlyfire.txt', reflect_friendlyfire, true );
         m_FileSystem.GetKeyAndValue( m_szPath + 'using_ddd.txt', using_ddd, true );
         m_FileSystem.GetKeyAndValue( m_szPath + 'always_gib.txt', always_gib, true );
@@ -42,5 +41,6 @@ final class CMSG
         global_messages( agrunt_berserk, 'agrunt berserk', true, msgPath );
         global_messages( agrunt_punchpush, 'agrunt punch', true, msgPath );
         global_messages( agrunt_stun, 'agrunt stun', true, msgPath );
+        global_messages( islave_zap, 'islave zap', true, msgPath );
     }
 }
