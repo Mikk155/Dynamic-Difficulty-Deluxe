@@ -182,6 +182,39 @@ void SetCvars( const CCommand@ args )
                 func_player.enable_maxarmor = atoi( args[3] );
             }
         }
+        else if( args[2] == 'gib' )
+        {
+            if( args[3] == 'diff' )
+            {
+                func_player.diff_gib = atoi( args[4] );
+            }
+            else
+            {
+                func_player.enable_gib = atoi( args[3] );
+            }
+        }
+    }
+    else if( args[1] == 'squad' )
+    {
+        if( args[2] == 'diff' )
+        {
+            func_squad_alert.diff = atoi( args[3] );
+        }
+        else
+        {
+            func_squad_alert.enable = atoi( args[2] );
+        }
+    }
+    else if( args[1] == 'alert' )
+    {
+        if( args[2] == 'diff' )
+        {
+            func_monster_alert.diff = atoi( args[3] );
+        }
+        else
+        {
+            func_monster_alert.enable = atoi( args[2] );
+        }
     }
 
     g_EngineFuncs.ServerPrint( '[DDD] ' + args.GetCommandString() + '\n' );
@@ -215,12 +248,6 @@ final class DDDCvars
 
     // Gonome split speed
     bool func_proj_speed_gonome = true;
-
-    // Set health for reviving players
-    bool func_playerrevive = true;
-
-    // Set max_health for players
-    bool func_playermaxhealth = true;
 
     // squads will be alerted if any member does
     bool func_squad_alert = true;

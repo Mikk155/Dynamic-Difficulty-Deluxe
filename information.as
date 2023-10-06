@@ -32,20 +32,20 @@ g_DDD.diff == 0 ? ( m_Language.GetLanguage( pPlayer, msg.nochanges ) + '\n' ) : 
 
 ( func_player.active( func_player.enable_maxarmor, func_player.diff_maxarmor ) ? m_Language.GetLanguage( pPlayer, msg.player_cap_armor ).Replace( '$armor$', string( func_player.Clamp( 'maxarmor', func_player.diff_maxarmor ) ) ) + '\n\n' : '' ) +
 
+( func_player.active( func_player.enable_gib, func_player.diff_gib ) ? m_Language.GetLanguage( pPlayer, msg.always_gib ) + '\n\n' : '\n' ) +
+
+( func_squad_alert.active() ? m_Language.GetLanguage( pPlayer, msg.squad_alerted ) + '\n\n' : '\n' ) +
+
+( func_monster_alert.active() ? m_Language.GetLanguage( pPlayer, msg.monster_alert ) + '\n\n' : '\n' ) +
+
 
 /*
 ( g_DDD.func_proj_speed_hornet || g_DDD.func_proj_speed_garg_stomp ? m_Language.GetLanguage( pPlayer, msg.projectiles_speed ).Replace( '$percent$', string( g_DDD.diff ) + '%' ) + '\n\n' : '' ) +
 
-( g_DDD.func_squad_alert && g_DDD.IsActive( squad.diff ) ? m_Language.GetLanguage( pPlayer, msg.squad_alerted ) + '\n\n' : '\n' ) +
-
 ( g_DDD.func_reflect_friendlyfire && g_DDD.diff >= 40 ? m_Language.GetLanguage( pPlayer, msg.reflect_friendlyfire ) + '\n\n' : '\n' ) +
 //( g_DDD.diff >= 40 ? m_Language.GetLanguage( pPlayer, msg.ATele ).Replace( '$time$', string( ( g_Atele.iMaxTime / g_DDD.diff ) ) ) + '\n\n' : '\n' ) +
 
-
-( g_DDD.func_monster_alert && g_DDD.IsActive( alert.diff ) ? m_Language.GetLanguage( pPlayer, msg.monster_alert ) + '\n\n' : '\n' ) +
-
-( g_DDD.func_always_gib && g_DDD.diff == 100 ? m_Language.GetLanguage( pPlayer, msg.always_gib ) + '\n\n' : '\n' ) +*/
-
+]*/
 
 ''
 ) + '\n'

@@ -72,13 +72,13 @@ final class CMSG
         global_messages( deathdrop_grenade, 'deathdrop grenade', true, msgPath );
         global_messages( player_cap_health, 'player cap health', true, msgPath );
         global_messages( player_cap_armor, 'player cap armor', true, msgPath );
+        global_messages( always_gib, 'player always gib', true, msgPath );
+        global_messages( squad_alerted, 'squad protect', true, msgPath );
+        global_messages( monster_alert, 'monster alert', true, msgPath );
 
 
         /*
         m_FileSystem.GetKeyAndValue( m_szPath + 'reflect_friendlyfire.txt', reflect_friendlyfire, true );
-        m_FileSystem.GetKeyAndValue( m_szPath + 'always_gib.txt', always_gib, true );
-        m_FileSystem.GetKeyAndValue( m_szPath + 'monster_alert.txt', monster_alert, true );
-        m_FileSystem.GetKeyAndValue( m_szPath + 'squad_alerted.txt', squad_alerted, true );
         m_FileSystem.GetKeyAndValue( m_szPath + 'projectiles_speed.txt', projectiles_speed, true );
         */
     }

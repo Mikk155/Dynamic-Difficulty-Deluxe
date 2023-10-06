@@ -159,6 +159,26 @@ On-re-spawn players will have health based on the current difficulty
 | player health diff | 70 | minimun difficulty in wich this feature will be enabled |
 | player armor | 1 | 0 = disable players spawning with a set max armor |
 | player armor diff | 70 | minimun difficulty in wich this feature will be enabled |
+| player gib | 1 | 0 = disable players ALWAYS_GIB on death |
+| player gib diff | 100 | minimun difficulty in wich this feature will be enabled |
+
+---
+
+### squad follow
+
+| as_command | default value | description |
+|------------|---------------|-------------|
+| squad | 1 | 0 = disable squad of monsters following members of their squad when they find a enemy |
+| squad diff | 50 | minimun difficulty in wich this feature will be enabled |
+
+---
+
+### monster alert
+
+| as_command | default value | description |
+|------------|---------------|-------------|
+| alert | 1 | 0 = disable monsters from knowing the position of the attacker |
+| alert diff | 70 | minimun difficulty in wich this feature will be enabled |
 
 ---
 
@@ -191,10 +211,15 @@ as_command .DynamicDifficultyDeluxe voltigore gib diff 1
 as_command .DynamicDifficultyDeluxe deathdrop grenade 1
 as_command .DynamicDifficultyDeluxe deathdrop grenade diff 1
 as_command .DynamicDifficultyDeluxe player health 1
-as_command .DynamicDifficultyDeluxe player health diff 1
+as_command .DynamicDifficultyDeluxe player health diff 70
 as_command .DynamicDifficultyDeluxe player armor 1
-as_command .DynamicDifficultyDeluxe player armor diff 1
-
+as_command .DynamicDifficultyDeluxe player armor diff 70
+as_command .DynamicDifficultyDeluxe player gib 1
+as_command .DynamicDifficultyDeluxe player gib diff 100
+as_command .DynamicDifficultyDeluxe squad 1
+as_command .DynamicDifficultyDeluxe squad diff 100
+as_command .DynamicDifficultyDeluxe alert 1
+as_command .DynamicDifficultyDeluxe alert diff 100
 
 ```
 
