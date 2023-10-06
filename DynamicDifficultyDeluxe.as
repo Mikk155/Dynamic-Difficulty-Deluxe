@@ -60,50 +60,10 @@ CDynamicDifficultyDeluxe g_DDD;
 
 final class CDynamicDifficultyDeluxe
 {
-    // Speed up for hornets
-    bool func_proj_speed_hornet = true;
-
-    // Speed up for garg stomp
-    bool func_proj_speed_garg_stomp = true;
-
-    // voltigore beam speed
-    //bool func_proj_speed_voltigorebeam = true;
-
-    // Speed of bullsquit split
-    bool func_proj_speed_bullsquid = true;
-
-    // Speed of pitdrone spikes
-    bool func_proj_speed_pitdrone = true;
-
-    // Speed of spore grenades
-    bool func_proj_speed_spore = true;
-
-    // Gonome split speed
-    bool func_proj_speed_gonome = true;
-
-    // Set health for reviving players
-    bool func_playerrevive = true;
-
-    // Set max_health for players
-    bool func_playermaxhealth = true;
-
-    // Monster will inspectionate the area when a player uses a weapon
-    bool func_monster_inspect_area = false;
-
-    // Reflect damage dealth to ally players
-    bool func_reflect_friendlyfire = true;
-
-    // ======================================== \\
-    // ======= End of Customizable zone ======= \\
-    // ======================================== \\
-
-    // Don't modify, these are subject to change dynamicaly
     int diff = 100;
     int cooldown = 0;
     bool voting = false;
 
-
-    // Think cooldown votes
     CScheduledFunction@ g_Think = null;
 
     void Init()
