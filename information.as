@@ -5,7 +5,8 @@ m_PlayerFuncs.ShowMOTD
 pPlayer,
 '[DifficultyDeluxe]',
 
-m_Language.GetLanguage( pPlayer, msg.diff_current ).Replace( '$diff$', string( g_DDD.diff ) ) + '%\n\n' +
+m_Language.GetLanguage( pPlayer, msg.diff_current ).Replace( '$diff$', string( g_DDD.diff ) + '% (' + m_Language.GetLanguage( pPlayer, msg.GetProperDiff() ) + ')' ) + '\n' +
+
 (
 g_DDD.diff == 0 ? ( m_Language.GetLanguage( pPlayer, msg.nochanges ) + '\n' ) : ( m_Language.GetLanguage( pPlayer, msg.changes ) + '\n\n' ) +
 
@@ -33,27 +34,6 @@ g_DDD.diff == 0 ? ( m_Language.GetLanguage( pPlayer, msg.nochanges ) + '\n' ) : 
 
 ( g_DDD.func_playerrevive ? m_Language.GetLanguage( pPlayer, msg.player_revive ).Replace( '$health$', string( 101 - g_DDD.diff ) ) + '\n\n' : '' ) +
 
-			bStr = "(Lowest Difficulty)";
-		else if(m_flAverageVoteDifficulty<0.1)
-			bStr = "(Beginners)";
-		else if(m_flAverageVoteDifficulty<0.2)
-			bStr = "(Very Easy)";
-		else if(m_flAverageVoteDifficulty<0.4)
-			bStr = "(Easy)";
-		else if(m_flAverageVoteDifficulty<0.6)
-			bStr = "(Medium)";
-		else if(m_flAverageVoteDifficulty<0.75)
-			bStr = "(Hard)";
-		else if(m_flAverageVoteDifficulty<0.85)
-			bStr = "(Very Hard!)";
-		else if(m_flAverageVoteDifficulty<0.9)
-			bStr = "(WARNING: Extreme!)";
-		else if(m_flAverageVoteDifficulty<0.95)
-			bStr = "(WARNING: Near Impossible!)";
-		else if(m_flAverageVoteDifficulty<0.9995)
-			bStr = "(WARNING: Impossible!)";
-		else
-			bStr = "(WARNING: MAXIMUM DIFFICULTY!)";
 
 
 // >10
