@@ -26,10 +26,10 @@ g_DDD.diff == 0 ? ( m_Language.GetLanguage( pPlayer, msg.nochanges ) + '\n' ) : 
 
 ( func_voltigore.active( func_voltigore.enable_gib, func_voltigore.diff_gib ) ? m_Language.GetLanguage( pPlayer, msg.voltigore_explode ).Replace( '$percent$', string( g_DDD.diff ) + '%' ) + '\n\n' : '' ) +
 
+( func_deathdrop.active( func_deathdrop.enable_grenade, func_deathdrop.diff_grenade ) ? m_Language.GetLanguage( pPlayer, msg.deathdrop_grenade ).Replace( '$percent$', string( g_DDD.diff ) + '%' ) + '\n\n' : '' ) +
+
 
 /*
-( g_DDD.func_deathdrop_grenade ? m_Language.GetLanguage( pPlayer, msg.deathdrop_grenade ).Replace( '$percent$', string( g_DDD.diff ) + '%' ) + '\n\n' : '' ) +
-
 ( g_DDD.func_proj_speed_hornet || g_DDD.func_proj_speed_garg_stomp ? m_Language.GetLanguage( pPlayer, msg.projectiles_speed ).Replace( '$percent$', string( g_DDD.diff ) + '%' ) + '\n\n' : '' ) +
 
 ( g_DDD.func_playerrevive ? m_Language.GetLanguage( pPlayer, msg.player_revive ).Replace( '$health$', string( 101 - g_DDD.diff ) ) + '\n\n' : '' ) +
