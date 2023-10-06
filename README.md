@@ -136,10 +136,22 @@ any monster/squadmaker entity supports two custom keyvalues.
 
 ---
 
+### deathdrop
+
+On-Death some monsters have a chance of spawning some entities.
+
+| as_command | default value | description |
+|------------|---------------|-------------|
+| deathdrop grenade | 1 | 0 = disable monsters chance of dropping a grenade on death |
+| deathdrop grenade diff | 1 | minimun difficulty in wich this feature will be enabled |
+
+---
+
 <details><summary>default_map_settings.cfg</summary>
 <p>
 
-```
+```angelscript
+
 as_command .DynamicDifficultyDeluxe disable 0
 as_command .DynamicDifficultyDeluxe vote cooldown 60
 as_command .DynamicDifficultyDeluxe vote time 15
@@ -161,6 +173,8 @@ as_command .DynamicDifficultyDeluxe islave zap diff 1
 as_command .DynamicDifficultyDeluxe appearflags 0
 as_command .DynamicDifficultyDeluxe voltigore gib 1
 as_command .DynamicDifficultyDeluxe voltigore gib diff 1
+as_command .DynamicDifficultyDeluxe deathdrop grenade 1
+as_command .DynamicDifficultyDeluxe deathdrop grenade diff 1
 
 
 ```
