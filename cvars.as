@@ -158,6 +158,31 @@ void SetCvars( const CCommand@ args )
             }
         }
     }
+    else if( args[1] == 'player' )
+    {
+        if( args[2] == 'health' )
+        {
+            if( args[3] == 'diff' )
+            {
+                func_player.diff_maxhealth = atoi( args[4] );
+            }
+            else
+            {
+                func_player.enable_maxhealth = atoi( args[3] );
+            }
+        }
+        else if( args[2] == 'armor' )
+        {
+            if( args[3] == 'diff' )
+            {
+                func_player.diff_maxarmor = atoi( args[4] );
+            }
+            else
+            {
+                func_player.enable_maxarmor = atoi( args[3] );
+            }
+        }
+    }
 
     g_EngineFuncs.ServerPrint( '[DDD] ' + args.GetCommandString() + '\n' );
 }
@@ -169,27 +194,6 @@ final class DDDCvars
     int votes_cooldown = 60;
     int votes_time = 15;
     int votes_allowin = 30;
-
-    // alien grunt engage distance updates
-    bool func_alien_grunt_berserk = true;
-
-    // alien grunt will punch and pushs
-    bool func_alien_grunt_punch = true;
-
-    // alien grunt hornets will stun
-    bool func_alien_grunt_stun = true;
-
-    // Enable only if you're using appearflags in your map
-    bool func_appearflags = false;
-
-    // Allow zombies to be uncrabbed, Requires a compatible model! (model ends with "_uncrab.mdl" )
-    bool func_zombie_uncrab = true;
-
-    // Chance of a voltigore instantly exploding when die
-    bool func_voltigore_gib = true;
-
-    // Alien slave zap attack speed updates
-    bool func_alien_slave_zap = true;
 
     // Speed up for hornets
     bool func_proj_speed_hornet = true;
@@ -232,5 +236,4 @@ final class DDDCvars
 
     // Reflect damage dealth to ally players
     bool func_reflect_friendlyfire = true;
-
 }
