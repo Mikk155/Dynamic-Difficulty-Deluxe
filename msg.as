@@ -1,17 +1,53 @@
 CMSG msg;
 final class CMSG
 {
+    string msgPath = 'Dynamic-Difficulty-Deluxe/global_messages.ini';
+
     dictionary diff_voted, diff_updated, vote_menu, vote_showinfo, vote_startvote, vote_cooldown, vote_diffstarted, vote_notenought,
     changes, nochanges, agrunt_berserk, appearflags, barnacle_speed, zombie_uncrab, deathdrop_grenade, voltigore_explode, projectiles_speed,
     player_revive, agrunt_punchpush, agrunt_stun, squad_alerted, monster_alert, always_gib, diff_current, using_ddd, reflect_friendlyfire,
     islave_zap, diffforce_no, diffforce_yes
     ;
 
+    dictionary proper_diff;
+
+    dictionary GetProperDiff()
+    {
+        if( string( g_DDD.diff ) == '100' )
+        {
+            return dictionary( proper_diff[ '100' ] );
+        }
+        else if( g_DDD.diff >= 95 && g_DDD.diff < 99 )
+        {
+            return dictionary( proper_diff[ '95' ] );
+        }
+        else if( g_DDD.diff == 99 )
+        {
+            return dictionary( proper_diff[ '99' ] );
+        }
+
+        return dictionary( proper_diff[ string( g_DDD.diff )[0] ] );
+    }
+
     void PluginInit()
     {
-        string msgPath = 'Dynamic-Difficulty-Deluxe/global_messages.ini';
+        dictionary df;
+        global_messages( df, 'diff 0', true, msgPath ); proper_diff[ '0' ] = df;
+        global_messages( df, 'diff 10', true, msgPath ); proper_diff[ '1' ] = df;
+        global_messages( df, 'diff 20', true, msgPath ); proper_diff[ '2' ] = df;
+        global_messages( df, 'diff 30', true, msgPath ); proper_diff[ '3' ] = df;
+        global_messages( df, 'diff 40', true, msgPath ); proper_diff[ '4' ] = df;
+        global_messages( df, 'diff 50', true, msgPath ); proper_diff[ '5' ] = df;
+        global_messages( df, 'diff 60', true, msgPath ); proper_diff[ '6' ] = df;
+        global_messages( df, 'diff 70', true, msgPath ); proper_diff[ '7' ] = df;
+        global_messages( df, 'diff 80', true, msgPath ); proper_diff[ '8' ] = df;
+        global_messages( df, 'diff 90', true, msgPath ); proper_diff[ '9' ] = df;
+        global_messages( df, 'diff 95', true, msgPath ); proper_diff[ '95' ] = df;
+        global_messages( df, 'diff 99', true, msgPath ); proper_diff[ '99' ] = df;
+        global_messages( df, 'diff 100', true, msgPath ); proper_diff[ '100' ] = df;
 
-        /*m_FileSystem.GetKeyAndValue( m_szPath + 'diffforce_yes.txt', diffforce_yes, true );
+        /*
+        m_FileSystem.GetKeyAndValue( m_szPath + 'diffforce_yes.txt', diffforce_yes, true );
         m_FileSystem.GetKeyAndValue( m_szPath + 'diffforce_no.txt', diffforce_no, true );
         m_FileSystem.GetKeyAndValue( m_szPath + 'reflect_friendlyfire.txt', reflect_friendlyfire, true );
         m_FileSystem.GetKeyAndValue( m_szPath + 'using_ddd.txt', using_ddd, true );
