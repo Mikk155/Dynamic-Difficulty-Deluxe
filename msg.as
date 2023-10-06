@@ -5,8 +5,8 @@ final class CMSG
 
     dictionary diff_voted, diff_updated, vote_menu, vote_showinfo, vote_startvote, vote_cooldown, vote_diffstarted, vote_notenought,
     changes, nochanges, agrunt_berserk, appearflags, barnacle_speed, zombie_uncrab, deathdrop_grenade, voltigore_explode, projectiles_speed,
-    player_revive, agrunt_punchpush, agrunt_stun, squad_alerted, monster_alert, always_gib, diff_current, using_ddd, reflect_friendlyfire,
-    islave_zap, diffforce_no, diffforce_yes
+    player_cap_health, player_cap_armor, agrunt_punchpush, agrunt_stun, squad_alerted, monster_alert, always_gib, diff_current, using_ddd,
+    reflect_friendlyfire, islave_zap, diffforce_no, diffforce_yes
     ;
 
     // dictionary de dictionarys :XD:
@@ -47,16 +47,6 @@ final class CMSG
         global_messages( df, 'diff 99', true, msgPath ); proper_diff[ '99' ] = df;
         global_messages( df, 'diff 100', true, msgPath ); proper_diff[ '100' ] = df;
 
-        /*
-        m_FileSystem.GetKeyAndValue( m_szPath + 'reflect_friendlyfire.txt', reflect_friendlyfire, true );
-        m_FileSystem.GetKeyAndValue( m_szPath + 'always_gib.txt', always_gib, true );
-        m_FileSystem.GetKeyAndValue( m_szPath + 'monster_alert.txt', monster_alert, true );
-        m_FileSystem.GetKeyAndValue( m_szPath + 'squad_alerted.txt', squad_alerted, true );
-        m_FileSystem.GetKeyAndValue( m_szPath + 'player_revive.txt', player_revive, true );
-        m_FileSystem.GetKeyAndValue( m_szPath + 'projectiles_speed.txt', projectiles_speed, true );
-        */
-
-
         global_messages( barnacle_speed, 'barnacle speed up', true, msgPath );
         global_messages( vote_notenought, 'vote failed no votes', true, msgPath );
         global_messages( vote_diffstarted, 'vote started', true, msgPath );
@@ -80,5 +70,16 @@ final class CMSG
         global_messages( appearflags, 'appearflags', true, msgPath );
         global_messages( voltigore_explode, 'voltigore gib', true, msgPath );
         global_messages( deathdrop_grenade, 'deathdrop grenade', true, msgPath );
+        global_messages( player_cap_health, 'player cap health', true, msgPath );
+        global_messages( player_cap_armor, 'player cap armor', true, msgPath );
+
+
+        /*
+        m_FileSystem.GetKeyAndValue( m_szPath + 'reflect_friendlyfire.txt', reflect_friendlyfire, true );
+        m_FileSystem.GetKeyAndValue( m_szPath + 'always_gib.txt', always_gib, true );
+        m_FileSystem.GetKeyAndValue( m_szPath + 'monster_alert.txt', monster_alert, true );
+        m_FileSystem.GetKeyAndValue( m_szPath + 'squad_alerted.txt', squad_alerted, true );
+        m_FileSystem.GetKeyAndValue( m_szPath + 'projectiles_speed.txt', projectiles_speed, true );
+        */
     }
 }

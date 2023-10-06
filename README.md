@@ -147,6 +147,21 @@ On-Death some monsters have a chance of spawning some entities.
 
 ---
 
+### player
+
+On-revive players will have health based on the current difficulty
+
+On-re-spawn players will have health based on the current difficulty
+
+| as_command | default value | description |
+|------------|---------------|-------------|
+| player health | 1 | 0 = disable players spawning with a set max health |
+| player health diff | 70 | minimun difficulty in wich this feature will be enabled |
+| player armor | 1 | 0 = disable players spawning with a set max armor |
+| player armor diff | 70 | minimun difficulty in wich this feature will be enabled |
+
+---
+
 <details><summary>default_map_settings.cfg</summary>
 <p>
 
@@ -175,6 +190,10 @@ as_command .DynamicDifficultyDeluxe voltigore gib 1
 as_command .DynamicDifficultyDeluxe voltigore gib diff 1
 as_command .DynamicDifficultyDeluxe deathdrop grenade 1
 as_command .DynamicDifficultyDeluxe deathdrop grenade diff 1
+as_command .DynamicDifficultyDeluxe player health 1
+as_command .DynamicDifficultyDeluxe player health diff 1
+as_command .DynamicDifficultyDeluxe player armor 1
+as_command .DynamicDifficultyDeluxe player armor diff 1
 
 
 ```
