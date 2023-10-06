@@ -144,6 +144,20 @@ void SetCvars( const CCommand@ args )
             }
         }
     }
+    else if( args[1] == 'deathdrop' )
+    {
+        if( args[2] == 'grenade' )
+        {
+            if( args[3] == 'diff' )
+            {
+                func_deathdrop.diff_grenade = atoi( args[4] );
+            }
+            else
+            {
+                func_deathdrop.enable_grenade = atoi( args[3] );
+            }
+        }
+    }
 
     g_EngineFuncs.ServerPrint( '[DDD] ' + args.GetCommandString() + '\n' );
 }
@@ -170,9 +184,6 @@ final class DDDCvars
 
     // Allow zombies to be uncrabbed, Requires a compatible model! (model ends with "_uncrab.mdl" )
     bool func_zombie_uncrab = true;
-
-    // Creates a grenade on npc-death if there are no allies of him around and the npc in question does have grenades
-    bool func_deathdrop_grenade = true;
 
     // Chance of a voltigore instantly exploding when die
     bool func_voltigore_gib = true;
