@@ -5,7 +5,7 @@ m_PlayerFuncs.ShowMOTD
 pPlayer,
 '[DifficultyDeluxe]',
 
-m_Language.GetLanguage( pPlayer, msg.diff_current ).Replace( '$diff$', string( g_DDD.diff ) + '% (' + m_Language.GetLanguage( pPlayer, msg.GetProperDiff() ) + ')' ) + '\n' +
+m_Language.GetLanguage( pPlayer, msg.diff_current ).Replace( '$diff$', string( g_DDD.diff ) + '% (' + m_Language.GetLanguage( pPlayer, msg.GetProperDiff() ) + ')' ) + '\n\n' +
 
 (
 g_DDD.diff == 0 ? ( m_Language.GetLanguage( pPlayer, msg.nochanges ) + '\n' ) : ( m_Language.GetLanguage( pPlayer, msg.changes ) + '\n\n' ) +
@@ -34,37 +34,14 @@ g_DDD.diff == 0 ? ( m_Language.GetLanguage( pPlayer, msg.nochanges ) + '\n' ) : 
 
 ( g_DDD.func_playerrevive ? m_Language.GetLanguage( pPlayer, msg.player_revive ).Replace( '$health$', string( 101 - g_DDD.diff ) ) + '\n\n' : '' ) +
 
-
-
-// >10
-
-
-// >20
-
-
-// >30
 ( g_DDD.func_squad_alert && g_DDD.IsActive( squad.diff ) ? m_Language.GetLanguage( pPlayer, msg.squad_alerted ) + '\n\n' : '\n' ) +
 
-
-// >40
 ( g_DDD.func_reflect_friendlyfire && g_DDD.diff >= 40 ? m_Language.GetLanguage( pPlayer, msg.reflect_friendlyfire ) + '\n\n' : '\n' ) +
 //( g_DDD.diff >= 40 ? m_Language.GetLanguage( pPlayer, msg.ATele ).Replace( '$time$', string( ( g_Atele.iMaxTime / g_DDD.diff ) ) ) + '\n\n' : '\n' ) +
 
 
-// >50
 ( g_DDD.func_monster_alert && g_DDD.IsActive( alert.diff ) ? m_Language.GetLanguage( pPlayer, msg.monster_alert ) + '\n\n' : '\n' ) +
 
-
-// >60
-
-
-// >70
-
-
-// >80
-
-
-// >90
 ( g_DDD.func_always_gib && g_DDD.diff == 100 ? m_Language.GetLanguage( pPlayer, msg.always_gib ) + '\n\n' : '\n' ) +*/
 
 
