@@ -3,9 +3,13 @@ DDDPlayer func_player;
 final class DDDPlayer
 {
     int enable_maxhealth = 1;
-    int enable_maxarmor = 1;
     int diff_maxhealth = 70;
+
+    int enable_maxarmor = 1;
     int diff_maxarmor = 70;
+
+    int enable_gib = 1;
+    int diff_gib = 100;
 
     bool active( int tu, int td )
     {
