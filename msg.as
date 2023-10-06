@@ -9,6 +9,7 @@ final class CMSG
     islave_zap, diffforce_no, diffforce_yes
     ;
 
+    // dictionary de dictionarys :XD:
     dictionary proper_diff;
 
     dictionary GetProperDiff()
@@ -47,18 +48,14 @@ final class CMSG
         global_messages( df, 'diff 100', true, msgPath ); proper_diff[ '100' ] = df;
 
         /*
-        m_FileSystem.GetKeyAndValue( m_szPath + 'diffforce_yes.txt', diffforce_yes, true );
-        m_FileSystem.GetKeyAndValue( m_szPath + 'diffforce_no.txt', diffforce_no, true );
         m_FileSystem.GetKeyAndValue( m_szPath + 'reflect_friendlyfire.txt', reflect_friendlyfire, true );
-        m_FileSystem.GetKeyAndValue( m_szPath + 'using_ddd.txt', using_ddd, true );
         m_FileSystem.GetKeyAndValue( m_szPath + 'always_gib.txt', always_gib, true );
         m_FileSystem.GetKeyAndValue( m_szPath + 'monster_alert.txt', monster_alert, true );
         m_FileSystem.GetKeyAndValue( m_szPath + 'squad_alerted.txt', squad_alerted, true );
         m_FileSystem.GetKeyAndValue( m_szPath + 'player_revive.txt', player_revive, true );
         m_FileSystem.GetKeyAndValue( m_szPath + 'projectiles_speed.txt', projectiles_speed, true );
         m_FileSystem.GetKeyAndValue( m_szPath + 'deathdrop_grenade.txt', deathdrop_grenade, true );
-        m_FileSystem.GetKeyAndValue( m_szPath + 'nochanges.txt', nochanges, true );
-        m_FileSystem.GetKeyAndValue( m_szPath + 'changes.txt', changes, true );*/
+        */
 
 
         global_messages( barnacle_speed, 'barnacle speed up', true, msgPath );
@@ -70,7 +67,12 @@ final class CMSG
         global_messages( vote_menu, 'vote menu', true, msgPath );
         global_messages( diff_updated, 'diff updated', true, msgPath );
         global_messages( diff_current, 'diff current', true, msgPath );
+        global_messages( using_ddd, 'diff advice', true, msgPath );
         global_messages( diff_voted, 'diff voted', true, msgPath );
+        global_messages( nochanges, 'diff no changes', true, msgPath );
+        global_messages( changes, 'diff changes', true, msgPath );
+        global_messages( diffforce_no, 'diff admin no access', true, msgPath );
+        global_messages( diffforce_yes, 'diff admin updated', true, msgPath );
         global_messages( zombie_uncrab, 'zombie uncrab', true, msgPath );
         global_messages( agrunt_berserk, 'agrunt berserk', true, msgPath );
         global_messages( agrunt_punchpush, 'agrunt punch', true, msgPath );
